@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Playing Card Generator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <link
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div id="cardContainer">
+      <div id="imageContainer">
+        <img
+          id="assetImage"
+          src="assets/selected-card.png"
+          alt="Selected Card Image"
+        />
       </div>
+      <div class="topLeft"></div>
+      <div class="value"></div>
+      <div class="bottomRight"></div>
     </div>
+    <select id="cardStyle">
+      <option value="default">Default</option>
+      <option value="radial">Radial</option>
+    </select>
+    <button id="generateButton">Generate</button>
+    <button id="autoGenerateButton">Auto Generate</button>
+    <div>
+      <label for="cardWidth">Card Width:</label>
+      <input type="text" id="cardWidth" placeholder="Enter width in pixels" />
+      <label for="cardHeight">Card Height:</label>
+      <input type="text" id="cardHeight" placeholder="Enter height in pixels" />
+      <button id="applySizeButton">Apply Size</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
